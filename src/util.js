@@ -9,7 +9,7 @@ const casesTypeColors = {
   },
   recovered: {
     hex: "#7dd71d",
-    multiplier: 1200,
+    multiplier: 900,
   },
   deaths: {
     hex: "#fb4443",
@@ -30,9 +30,11 @@ export const showDataOnMap = (data, casesType = "cases") =>
   data.map((country) => (
     <Circle
       center={[country.countryInfo.lat, country.countryInfo.long]}
+      pathOptions={{
+        color: casesTypeColors[casesType].hex,
+        fillColor: casesTypeColors[casesType].hex,
+      }}
       fillOpacity={0.4}
-      color={casesTypeColors[casesType].hex}
-      fillColor={casesTypeColors[casesType].hex}
       radius={
         (Math.sqrt(country[casesType]) *
           casesTypeColors[casesType].multiplier) /
