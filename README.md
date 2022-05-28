@@ -2,7 +2,8 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-#Demo/ Site
+
+## Demo/Site
 
 [Covid-19 Tracker](https://covid-19-tracker-83ce5.web.app/)
 
